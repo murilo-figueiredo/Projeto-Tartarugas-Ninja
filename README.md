@@ -8,4 +8,6 @@
 
  <p>A ideia veio de um evento do canal "Dev em Dobro", onde eles ensinaram a criar um projeto muito semelhante a esse, porém com personagens do anime One Piece e com JavaScript puro. A partir disso, eu resolvi criar esse projeto, <strong>explorando os recursos do React</strong> e incluindo os personagens do meu desenho favorito desde criança.</p>
 
+ <p>Link do projeto hospedado: https://murilo-figueiredo.github.io/Projeto-Tartarugas-Ninja/</p>
+
  <p>Espero que gostem :D</p>
