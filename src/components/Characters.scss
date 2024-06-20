@@ -1,0 +1,85 @@
+@import '../styles/responsive.scss';
+
+#Characters{
+    height: 100vh;
+    
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 85%;
+        height: 100%;
+    }
+
+    &.leo::after{
+        @include bgGradient(rgba(0, 0, 61, .75));
+    }
+    &.donnie::after{
+        @include bgGradient(rgba(52, 0, 88, .75));
+    }
+    &.rapha::after{
+        @include bgGradient(rgba(102, 0, 0, .75));
+    }
+    &.mikey::after{
+        @include bgGradient(rgba(128, 64, 0, .75));
+    }
+    &.splinter::after{
+        @include bgGradient(rgba(26, 12, 0, .75));
+    }
+
+    .bg-image{
+       width: 100%;
+       height: 100vh;
+       object-fit: cover;
+       @include bgPosition();
+    }
+
+    .info{
+        @include positionInfo();
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        max-width: 450px;
+        height: 100%;
+        z-index: 1;
+        
+        &.leo{
+            color: #A8A8F1;
+        }
+        &.donnie{
+            color: #C6A0E0;
+        }
+        &.rapha{
+            color: #D49898;
+        }
+        &.mikey{
+            color: #E4BE99;
+        }
+        &.splinter{
+            color: #B98A5F;
+        }
+
+        i{
+            @include logoSize();
+            background-size: cover;
+            background-image: url('tmnt-logo.png');
+            background-position: center;
+            margin-left: -20px;
+            margin-bottom: 25px;
+        }
+        
+        h2{
+            font-family: 'Secular One', serif;
+            font-size: 48px;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+        
+        p{
+            font-family: 'Rubik', sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}

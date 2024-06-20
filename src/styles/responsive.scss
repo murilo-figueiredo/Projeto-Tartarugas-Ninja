@@ -1,0 +1,125 @@
+@mixin bgPosition(){
+    object-position: top;
+
+    @media (max-width: 575px){  
+        object-position: -590px;
+    }
+
+    @media (max-width: 393px){
+        object-position: -570px;
+    }
+}
+
+@mixin bgGradient($color){
+    background: linear-gradient(100deg, $color 40%, transparent 65%) no-repeat;
+
+    @media (max-width: 769px){
+        background: linear-gradient(0deg, $color 55%, transparent 70%) no-repeat;
+    }
+
+    @media (max-width: 705px){
+        background: linear-gradient(0deg, $color 65%, transparent 80%) no-repeat;
+    }
+}
+
+@mixin logoSize(){
+    width: 300px;
+    height: 100px;
+    
+    @media (max-width: 1068px){
+        width: 250px;
+        height: 83.3px;
+    }
+
+    @media (max-width: 705px){
+        width: 200px;
+        height: 66.6px;
+    }
+}
+
+@mixin positionInfo(){
+    top: 0;
+    left: 115px;
+    justify-content: center;
+
+    @media (max-width: 1068px){
+        left: 60px;
+    }
+
+    @media (max-width: 705px){
+        justify-content: flex-start;
+        margin-top: 50px;
+    }
+
+    @media (max-width: 575px){
+        margin-top: 100px;
+        left: 20px;
+    }
+}
+
+@mixin buttonsSize(){
+    width: 45px;
+
+    @media (max-width: 575px){
+        width: 40px;
+    }
+
+    @media (max-width: 425px){
+        width: 30px;
+    }
+
+    @media (max-width: 393px){
+        width: 25px;
+    }
+}
+
+@media (max-width: 769px){
+    #Characters{
+        &::after{
+            width: 100%;
+        }
+    }
+
+    #Options{
+        width: 20%;
+        background: none;
+    }
+}
+
+@media (max-width: 705px){
+    #Options{
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        z-index: 2;
+
+        .list-options{
+            flex-direction: row;
+            gap: 5px;
+        }
+    }
+}
+
+@media (max-width: 575px){
+    #Characters .info{
+        max-width: 310px;
+
+        i{
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        h2{
+            font-size: 40px;
+        }
+    }
+}
+
+@media (max-width: 393px){
+    #Characters .info p{
+        font-size: 13px;
+    }
+}
